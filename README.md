@@ -34,7 +34,7 @@ API v3 Openstack del cloud al que se quiere acceder, normalmente suele ser algo 
 
 # Ejemplo de uso:
 
-
+```
 [usuario1@linux ]$ python gnocchi-contador-uso-recursos.py 
 -------------------------------------------------------------------------------------------------------
 USO DE RECURSOS INTERVALO FECHAS: %s ----- %s 2017-10-01 00:00:00+00:00 2017-11-01 00:00:00+00:00
@@ -65,6 +65,7 @@ USO DE RECURSOS INTERVALO FECHAS: %s ----- %s 2017-09-01 00:00:00+00:00 2017-10-
 | ip_flotantes |  0  |
 |  out_bytes   |  0  |
 +--------------+-----+
+```
 
 
 
