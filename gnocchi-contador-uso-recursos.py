@@ -104,10 +104,10 @@ class ContadorUsoRecursos():
         :return: None
         """
         tabla = PrettyTable()
-        tabla.field_names = ["Recurso", "Uso"]
+        tabla.field_names = ["Recurso", "Uso (units x min)"]
 
         print("-------------------------------------------------------------------------------------------------------")
-        print("USO DE RECURSOS INTERVALO FECHAS: %s ----- %s", self.fecha_inicio, self.fecha_final)
+        print("- USO DE RECURSOS INTERVALO FECHAS: %s ----- %s", self.fecha_inicio, self.fecha_final)
         print("-------------------------------------------------------------------------------------------------------")
         for key in self.contador.keys():
             tabla.add_row([key, self.contador[key]])
