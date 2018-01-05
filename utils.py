@@ -24,7 +24,8 @@ def AbrirSesionKeystone():
         raise (Exception)
 
     try:
-        sesion = keystoneauth1.session.Session(auth=auth, verify=os.environ['OS_CACERT'])
+        sesion = keystoneauth1.session.Session(auth=auth)
+        #sesion = keystoneauth1.session.Session(auth=auth, verify=os.environ['OS_CACERT'])
     except:
         raise (Exception)
 
@@ -99,7 +100,10 @@ def ObtenerInicioFinMesAnterior():
     :return: Fecha inicio del mes anterior, fecha inicio del mes actual
     """
     hoy = datetime.date.today()
-    dia_inicio_mes = datetime.datetime(hoy.year, hoy.month - 1, 1, tzinfo=datetime.timezone.utc)
+    if hoy.month > 1:
+        dia_inicio_mes = datetime.datetime(hoy.year, hoy.month - 1, 1, tzinfo=datetime.timezone.utc)
+    else:
+        dia_inicio_mes = datetime.datetime(hoy.year - 1, 12, 1, tzinfo=datetime.timezone.utc)
     dia_final_mes = dia_inicio_mes + dateutil.relativedelta.relativedelta(months=1)
 
     return dia_inicio_mes, dia_final_mes
