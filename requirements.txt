@@ -68,7 +68,7 @@ semantic-version==2.6.0
 simplejson==3.11.1
 six==1.11.0
 stevedore==1.27.1
-ujson==1.35
+ujson==5.4.0
 urllib3==1.22
 warlock==1.2.0
 wrapt==1.10.10
